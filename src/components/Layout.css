@@ -1,0 +1,9 @@
+.mdLinkDiv {
+    color: #fff;
+    margin: 0 1em;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
