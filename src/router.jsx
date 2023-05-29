@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import MainPage from './components/MainPage';
+import UnderConstructionPage from './components/UnderConstructionPage';
 
 const router = createBrowserRouter([
     {
@@ -8,19 +9,19 @@ const router = createBrowserRouter([
     },
     {
         path: '/projects',
-        element: <div>Projects Page</div>,
+        element: <UnderConstructionPage />,
     },
     {
         path: '/academics',
-        element: <div>Projects Page</div>,
+        element: <UnderConstructionPage />,
     },
     {
         path: '/achievements',
-        element: <div>Projects Page</div>,
+        element: <UnderConstructionPage />,
     },
     {
         path: '/useful-links',
-        element: <div>Projects Page</div>,
+        element: <UnderConstructionPage />,
     },
 ]);
 

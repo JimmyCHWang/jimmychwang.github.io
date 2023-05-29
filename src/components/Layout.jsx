@@ -19,6 +19,7 @@ import { useState } from 'react';
 import { EmojiEvents, FolderZip, Link as LinkIcon, Person, School } from '@mui/icons-material';
 import { useTheme } from '@emotion/react';
 import ThemeSwitch from './ThemeSwitch';
+import { Link as RouterLink } from 'react-router-dom';
 
 const navbarItems = [
     {
@@ -51,8 +52,7 @@ const navbarItems = [
 const Navbar = ({ onClickMenu }) => {
     const NavbarItem = ({ item, link, icon }) => (
         <Link
-            href={link}
-            underline="none"
+            component={RouterLink}
             mx={2}
             sx={{
                 display: { xs: 'none', md: 'flex' },
@@ -62,6 +62,8 @@ const Navbar = ({ onClickMenu }) => {
                 userSelect: 'none',
                 cursor: 'pointer',
             }}
+            to={link}
+            underline="none"
         >
             {icon}
             <Typography variant="h6" ml={1}>
@@ -86,9 +88,9 @@ const Navbar = ({ onClickMenu }) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Link href="/" underline="none">
+                    <RouterLink to="/">
                         <Box component="img" src={logo} alt={'Jimmy Wang'} sx={{ height: 32, width: 32 }} />
-                    </Link>
+                    </RouterLink>
                     {mdNavbarList}
                     <Box sx={{ flexGrow: 1 }} />
                     <Box>
@@ -107,10 +109,12 @@ const DrawerContent = () => {
                 <ListSubheader component="div">Pages</ListSubheader>
                 {navbarItems.map((item) => (
                     <ListItem key={item.item} disablePadding>
-                        <ListItemButton href={item.link}>
-                            <ListItemIcon>{item.icon}</ListItemIcon>
-                            <ListItemText primary={item.item} />
-                        </ListItemButton>
+                        <Link component={RouterLink} to={item.link} underline="none" color="text.primary">
+                            <ListItemButton>
+                                <ListItemIcon>{item.icon}</ListItemIcon>
+                                <ListItemText primary={item.item} />
+                            </ListItemButton>
+                        </Link>
                     </ListItem>
                 ))}
             </List>
