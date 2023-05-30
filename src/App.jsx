@@ -4,7 +4,7 @@ import * as React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
-import { RouterProvider, useNavigation } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 
 import router from './router';
 import ColorModeContext from './components/ColorModeContext';
@@ -18,7 +18,7 @@ const App = () => {
                 setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
             },
         }),
-        []
+        [mode]
     );
     React.useEffect(() => {
         if (localStorage.getItem('themeMode')) {

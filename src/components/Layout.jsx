@@ -2,6 +2,7 @@ import {
     AppBar,
     Box,
     Drawer,
+    Grid,
     IconButton,
     Link,
     Toolbar,
@@ -16,8 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../logo.png';
 import { useState } from 'react';
-import { EmojiEvents, FolderZip, Link as LinkIcon, Person, School } from '@mui/icons-material';
-import { useTheme } from '@emotion/react';
+import { EmojiEvents, FolderZip, Link as LinkIcon, Person, School, GitHub, Email, LinkedIn } from '@mui/icons-material';
 import ThemeSwitch from './ThemeSwitch';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -127,7 +127,33 @@ const Layout = ({ children }) => {
     const toggleSideMenu = () => {
         setShowSideMenu(!showSideMenu);
     };
-    const theme = useTheme();
+    const thisYear = new Date().getYear() + 1900;
+
+    const refLinks = [
+        {
+            item: 'GitHub',
+            link: 'https://github.com/JimmyCHWang',
+            icon: <GitHub />,
+        },
+        {
+            item: 'LinkedIn',
+            link: 'https://www.linkedin.com/in/jimmychwang/',
+            icon: <LinkedIn />,
+        },
+        {
+            item: 'Email',
+            link: 'mailto:wangjingheng0625@gmail.com',
+            icon: <Email />,
+        },
+    ];
+
+    const linkIcons = refLinks.map((item) => {
+        return (
+            <Link key={item.item} href={item.link} mx={2} color="text.primary">
+                {item.icon}
+            </Link>
+        );
+    });
     return (
         <>
             <header>
@@ -136,15 +162,14 @@ const Layout = ({ children }) => {
             <main>{children}</main>
 
             <footer>
-                <Box
-                    sx={{
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: theme.palette.primary,
-                    }}
-                >
-                    Hello world footer!
-                </Box>
+                <Grid container p={4}>
+                    <Grid item xs={12} md={4} sx={{ textAlign: 'left' }} my={2}>
+                        Copyright &#xA9; {thisYear} Jimmy Wang
+                    </Grid>
+                    <Grid item xs={12} md={8} sx={{ textAlign: { xs: 'left', md: 'right' } }} my={2}>
+                        {linkIcons}
+                    </Grid>
+                </Grid>
             </footer>
             <Drawer open={showSideMenu} anchor={'left'} variant={'temporary'} onClose={toggleSideMenu}>
                 <DrawerContent />
