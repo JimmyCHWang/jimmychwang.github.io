@@ -4,7 +4,7 @@ import { Typography } from '@mui/material';
 const UnderConstructionPage = () => {
     return (
         <Layout>
-            <Typography variant="h1">Under Construction</Typography>
+            <Typography variant="h3">Under Construction</Typography>
         </Layout>
     );
 };
