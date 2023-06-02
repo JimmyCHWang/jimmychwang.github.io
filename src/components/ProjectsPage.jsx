@@ -29,7 +29,7 @@ const LangIcon = ({ lang }) => {
         case 'Go':
             return <ToolTipIcon title="Go" icon={<GoOriginal size="24" />} />;
         case 'ActionScript':
-            return <ToolTipIcon title="Flash/ActionScript" icon={<img src={FlashIcon} width="24" />} />;
+            return <ToolTipIcon title="Flash/ActionScript" icon={<img src={FlashIcon} width="24" alt="Flash" />} />;
         case 'Java':
             return <ToolTipIcon title="Java" icon={<JavaOriginal size="24" />} />;
         default:
