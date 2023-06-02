@@ -45,7 +45,7 @@ const AcademicsPage = () => {
             headerName: 'Term',
             description: 'School Term',
             sortable: false,
-            width: 100,
+            width: 110,
             valueGetter: (params) => `20${params.row.year} ${termToText(params.row.term)}`,
         },
         {

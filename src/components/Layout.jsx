@@ -37,7 +37,7 @@ const navbarItems = [
         link: '/academics',
         icon: <School />,
     },
-    {
+    /*{
         item: 'Achievements',
         link: '/achievements',
         icon: <EmojiEvents />,
@@ -46,7 +46,7 @@ const navbarItems = [
         item: 'Useful Links',
         link: '/useful-links',
         icon: <LinkIcon />,
-    },
+    },*/
 ];
 
 const Navbar = ({ onClickMenu }) => {

@@ -1,3 +1,14 @@
 .App {
     text-align: center;
 }
+
+.highlight-transition {
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.highlight-background {
+    background-color: #ffff00;
+}
