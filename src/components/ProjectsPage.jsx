@@ -1,7 +1,15 @@
 import { Typography, Box, Container, Grid, Divider, Tooltip, IconButton, Chip } from '@mui/material';
 import Layout from './Layout';
 import fullProjectList from './FullProjectList';
-import { JavascriptOriginal, TypescriptOriginal, CplusplusOriginal, GoOriginal, JavaOriginal } from 'devicons-react';
+import {
+    JavascriptOriginal,
+    TypescriptOriginal,
+    CplusplusOriginal,
+    GoOriginal,
+    JavaOriginal,
+    COriginal,
+    PythonOriginal,
+} from 'devicons-react';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { TreeView, TreeItem } from '@mui/lab';
 import { ChevronRight, ExpandMore } from '@mui/icons-material';
@@ -26,12 +34,16 @@ const LangIcon = ({ lang }) => {
             return <ToolTipIcon title="TypeScript" icon={<TypescriptOriginal size="24" />} />;
         case 'C++':
             return <ToolTipIcon title="C++" icon={<CplusplusOriginal size="24" />} />;
+        case 'Python':
+            return <ToolTipIcon title="Python" icon={<PythonOriginal size="24" />} />;
         case 'Go':
             return <ToolTipIcon title="Go" icon={<GoOriginal size="24" />} />;
-        case 'ActionScript':
-            return <ToolTipIcon title="Flash/ActionScript" icon={<img src={FlashIcon} width="24" alt="Flash" />} />;
         case 'Java':
             return <ToolTipIcon title="Java" icon={<JavaOriginal size="24" />} />;
+        case 'ActionScript':
+            return <ToolTipIcon title="Flash/ActionScript" icon={<img src={FlashIcon} width="24" alt="Flash" />} />;
+        case 'C':
+            return <ToolTipIcon title="C" icon={<COriginal size="24" />} />;
         default:
             return <ToolTipIcon title="Unknown" icon={<QuestionMarkIcon size="24" />} />;
     }
