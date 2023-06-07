@@ -10,6 +10,7 @@ import {
     COriginal,
     PythonOriginalWordmark,
     ScalaOriginal,
+    LatexOriginal,
 } from 'devicons-react';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { TreeView, TreeItem } from '@mui/lab';
@@ -24,7 +25,9 @@ const monthToText = (month) => {
 
 const ToolTipIcon = ({ title, icon }) => (
     <Tooltip title={title}>
-        <IconButton size="large">{icon}</IconButton>
+        <IconButton size="large" sx={{ backgroundColor: '#ffffff', marginX: '4px' }}>
+            {icon}
+        </IconButton>
     </Tooltip>
 );
 
@@ -48,6 +51,8 @@ const LangIcon = ({ lang }) => {
             return <ToolTipIcon title="C" icon={<COriginal size="24" />} />;
         case 'Scala':
             return <ToolTipIcon title="Scala" icon={<ScalaOriginal size="24" />} />;
+        case 'LaTeX':
+            return <ToolTipIcon title="LaTeX" icon={<LatexOriginal size="24" />} />;
         default:
             return <ToolTipIcon title="Unknown" icon={<QuestionMarkIcon size="24" />} />;
     }
