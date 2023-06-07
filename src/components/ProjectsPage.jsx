@@ -8,12 +8,14 @@ import {
     GoOriginal,
     JavaOriginal,
     COriginal,
-    PythonOriginal,
+    PythonOriginalWordmark,
+    ScalaOriginal,
 } from 'devicons-react';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { TreeView, TreeItem } from '@mui/lab';
 import { ChevronRight, ExpandMore } from '@mui/icons-material';
 import FlashIcon from '../assets/adobe-flash.png';
+import CommonHelmet from './CommonHelmet';
 
 const monthToText = (month) => {
     //return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][month] || 'Unknown';
@@ -35,7 +37,7 @@ const LangIcon = ({ lang }) => {
         case 'C++':
             return <ToolTipIcon title="C++" icon={<CplusplusOriginal size="24" />} />;
         case 'Python':
-            return <ToolTipIcon title="Python" icon={<PythonOriginal size="24" />} />;
+            return <ToolTipIcon title="Python" icon={<PythonOriginalWordmark size="24" />} />;
         case 'Go':
             return <ToolTipIcon title="Go" icon={<GoOriginal size="24" />} />;
         case 'Java':
@@ -44,6 +46,8 @@ const LangIcon = ({ lang }) => {
             return <ToolTipIcon title="Flash/ActionScript" icon={<img src={FlashIcon} width="24" alt="Flash" />} />;
         case 'C':
             return <ToolTipIcon title="C" icon={<COriginal size="24" />} />;
+        case 'Scala':
+            return <ToolTipIcon title="Scala" icon={<ScalaOriginal size="24" />} />;
         default:
             return <ToolTipIcon title="Unknown" icon={<QuestionMarkIcon size="24" />} />;
     }
@@ -135,8 +139,11 @@ const ProjectsPage = () => {
             {idx !== fullProjectList.length - 1 && <Divider />}
         </Box>
     ));
+    const pageKeywords = 'jimmy, wang, personal website, projects, software engineer';
+    const pageDesc = "Jimmy Wang's personal website : Projects";
     return (
         <Layout>
+            <CommonHelmet title={'Projects'} keywords={pageKeywords} desc={pageDesc} />
             <Container sx={{ marginY: 2 }}>
                 <Grid container>
                     <Grid item xs={0} md={4} sx={{ display: { xs: 'none', md: 'grid' } }}>

@@ -7,6 +7,8 @@ import ArticleIcon from '@mui/icons-material/Article';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+import CommonHelmet from './CommonHelmet';
+
 const IconList = () => {
     const items = [
         {
@@ -41,8 +43,11 @@ const IconList = () => {
 };
 
 const MainPage = () => {
+    const pageKeywords = 'jimmy, wang, personal website, introduction, bio, software engineer';
+    const pageDesc = "Jimmy Wang's personal website : Biography";
     return (
         <Layout>
+            <CommonHelmet title={'Homepage'} keywords={pageKeywords} desc={pageDesc} />
             <Container sx={{ marginTop: { xs: 0, md: 2 } }}>
                 <Grid container sx={{ textAlign: 'center', py: 2 }}>
                     <Grid item xs={12} md={6}>

@@ -4,6 +4,7 @@ import Layout from './Layout';
 import courseList from './CourseList';
 import { DataGrid, GridToolbarContainer, GridToolbarColumnsButton, GridToolbarFilterButton } from '@mui/x-data-grid';
 import { useState } from 'react';
+import CommonHelmet from './CommonHelmet';
 
 function CircularProgressWithLabel(props) {
     return (
@@ -209,8 +210,11 @@ const AcademicsPage = () => {
             </Box>
         </GridToolbarContainer>
     );
+    const pageKeywords = 'jimmy, wang, personal website, academics, software engineer, courses, cmu, ucsc';
+    const pageDesc = "Jimmy Wang's personal website : Academics";
     return (
         <Layout>
+            <CommonHelmet title={'Academics'} keywords={pageKeywords} desc={pageDesc} />
             <Container sx={{ textAlign: 'center', marginY: '20px' }}>
                 <Grid container>
                     <Grid item xs={12} md={6}>
