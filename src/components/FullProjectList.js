@@ -17,33 +17,6 @@ const professionalProjects = [
         ],
     },
     {
-        id: 'sinosoft-tech',
-        label: 'Sinosoft Technology Ltd.',
-        type: 'h4',
-        children: [
-            {
-                id: 'meeting-arrangement',
-                label: 'Meeting Arrangement App',
-                type: 'h5',
-                children: null,
-                desc: "A mobile-based meeting management application, including user management, check-ins, private chats, etc. Designed mobile-first user interface (UI), as well as integrating with existing desktop-based solution's back-end part.",
-                lang: ['JavaScript', 'Java'],
-                tech: ['Vue', 'Node', 'Ant Design', 'Figma', 'SpringBoot', 'RESTful API', 'MySQL'],
-                time: [2022, 0, 2022, 3],
-            },
-            {
-                id: 'wechat-client-app',
-                label: 'Meeting Client App',
-                type: 'h5',
-                children: null,
-                desc: 'A mini app based on WeChat, targeting meeting participants and could interact with the managing app mentioned above. Features include registration, check-in QR codes, etc.',
-                lang: ['JavaScript'],
-                tech: ['Framework7', 'Vue', 'Node', 'PhotoShop', 'Figma', 'SubVersion'],
-                time: [2022, 0, 2022, 3],
-            },
-        ],
-    },
-    {
         id: 't34-studio',
         label: 'T34 Studio',
         type: 'h4',
