@@ -251,6 +251,9 @@ const AcademicsPage = () => {
                         pagination: {
                             paginationModel: { page: 0, pageSize: 10 },
                         },
+                        sorting: {
+                            sortModel: [{ field: 'term', sort: 'desc' }],
+                        },
                     }}
                     pageSizeOptions={[5, 10, 20]}
                     getRowId={(row) => row.course_dept + row.course_id}

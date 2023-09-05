@@ -9,6 +9,20 @@
     transition: all 0.2s ease-out;
 }
 
+@keyframes backgroundColorPalette {
+    0% {
+      background: transparent;
+    }
+    50% {
+      background: #ffff00;
+    }
+    100% {
+      background: transparent;
+    }
+  }
+
 .highlight-background {
-    background-color: #ffff00;
+    animation-name: backgroundColorPalette;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
 }

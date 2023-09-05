@@ -11,6 +11,12 @@ import {
     PythonOriginalWordmark,
     ScalaOriginal,
     LatexOriginal,
+    ReactOriginalWordmark,
+    VuejsOriginalWordmark,
+    FastapiOriginal,
+    MysqlOriginalWordmark,
+    MongodbOriginalWordmark,
+    NextjsOriginalWordmark,
 } from 'devicons-react';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { TreeView, TreeItem } from '@mui/lab';
@@ -53,6 +59,18 @@ const LangIcon = ({ lang }) => {
             return <ToolTipIcon title="Scala" icon={<ScalaOriginal size="24" />} />;
         case 'LaTeX':
             return <ToolTipIcon title="LaTeX" icon={<LatexOriginal size="24" />} />;
+        case 'React':
+            return <ToolTipIcon title="React" icon={<ReactOriginalWordmark size="24" />} />;
+        case 'Vue':
+            return <ToolTipIcon title="Vue" icon={<VuejsOriginalWordmark size="24" />} />;
+        case 'FastAPI':
+            return <ToolTipIcon title="FastAPI" icon={<FastapiOriginal size="24" />} />;
+        case 'MySQL':
+            return <ToolTipIcon title="MySQL" icon={<MysqlOriginalWordmark size="24" />} />;
+        case 'MongoDB':
+            return <ToolTipIcon title="MongoDB" icon={<MongodbOriginalWordmark size="24" />} />;
+        case 'NextJS':
+            return <ToolTipIcon title="NextJS" icon={<NextjsOriginalWordmark size="24" />} />;
         default:
             return <ToolTipIcon title="Unknown" icon={<QuestionMarkIcon size="24" />} />;
     }
@@ -124,10 +142,13 @@ const ProjectIndexTree = () => {
         <TreeView
             defaultCollapseIcon={<ExpandMore />}
             defaultExpandIcon={<ChevronRight />}
+            defaultExpanded={['professional', 'personal', 'academic']}
             sx={{ height: '100%', flexGrow: 1, overflowY: 'auto' }}
             onNodeSelect={(_, value) => {
                 const em = document.getElementById(value);
-                em.scrollIntoView();
+                em.scrollIntoView({
+                    behavior: 'instant',
+                });
                 em.classList.add('highlight-background');
                 setTimeout(() => em.classList.remove('highlight-background'), 400);
             }}

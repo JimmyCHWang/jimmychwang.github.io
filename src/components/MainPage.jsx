@@ -31,9 +31,9 @@ const IconList = () => {
         },
     ];
     const itemList = items.map((item) => (
-        <Button href={item.link} startIcon={item.icon} key={item.label}>
-            {item.label}
-        </Button>
+        <Link href={item.link} key={item.label} target="_blank">
+            <Button startIcon={item.icon}>{item.label}</Button>
+        </Link>
     ));
     return (
         <Stack direction="row" spacing={2}>
@@ -76,24 +76,24 @@ const MainPage = () => {
                                 <Typography variant="h5">Santa Clara, CA</Typography>
                                 <Typography variant="h5">
                                     <u>
-                                        <strong>Seeking SWE positions!</strong>
+                                        <strong>Seeking Fulltime SWE positions!</strong>
                                     </u>
                                 </Typography>
                                 <Typography mt={2}>
                                     M.S.,{' '}
-                                    <Link href="https://ece.cmu.edu">
+                                    <Link href="https://ece.cmu.edu" target="_blank">
                                         Electrical and Computer Engineering, Carnegie Mellon University
                                     </Link>
                                 </Typography>
                                 <Typography>
                                     B.S.,{' '}
-                                    <Link href="https://engineering.ucsc.edu">
+                                    <Link href="https://engineering.ucsc.edu" target="_blank">
                                         Computer Science, University of California, Santa Cruz
                                     </Link>
                                 </Typography>
                                 <Typography>
                                     B.A.,{' '}
-                                    <Link href="https://engineering.ucsc.edu">
+                                    <Link href="https://engineering.ucsc.edu" target="_blank">
                                         Network and Digital Technology, University of California, Santa Cruz
                                     </Link>
                                 </Typography>
@@ -115,7 +115,10 @@ const MainPage = () => {
                 </Typography>
                 <Typography mt={2}>
                     {`As part of my professional journey, I had the privilege of being a member of "T34 Studio", where I took on the role of a programmer for our latest game, `}
-                    <Link href="https://store.steampowered.com/app/1932830/The_Hexad_TrialsNings_Wing_3">
+                    <Link
+                        href="https://store.steampowered.com/app/1932830/The_Hexad_TrialsNings_Wing_3"
+                        target="_blank"
+                    >
                         {"Ning's Wing 3: The Hexad Trials"}
                     </Link>
                     {`. I find great satisfaction in leveraging my expertise to craft immersive and engaging experiences for users.`}

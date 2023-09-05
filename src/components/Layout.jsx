@@ -17,7 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../logo.png';
 import { useState } from 'react';
-import { EmojiEvents, FolderZip, Link as LinkIcon, Person, School, GitHub, Email, LinkedIn } from '@mui/icons-material';
+import { FolderZip, Person, School, GitHub, Email, LinkedIn } from '@mui/icons-material';
 import ThemeSwitch from './ThemeSwitch';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -149,7 +149,7 @@ const Layout = ({ children }) => {
 
     const linkIcons = refLinks.map((item) => {
         return (
-            <Link key={item.item} href={item.link} mx={2} color="text.primary">
+            <Link key={item.item} href={item.link} mx={2} color="text.primary" target="_blank">
                 {item.icon}
             </Link>
         );
