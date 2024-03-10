@@ -17,12 +17,14 @@ import {
     MysqlOriginalWordmark,
     MongodbOriginalWordmark,
     NextjsOriginalWordmark,
+    DjangoPlainWordmark,
 } from 'devicons-react';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { TreeView, TreeItem } from '@mui/lab';
 import { ChevronRight, ExpandMore } from '@mui/icons-material';
 import FlashIcon from '../assets/adobe-flash.png';
 import CommonHelmet from './CommonHelmet';
+import { Link } from 'react-router-dom';
 
 const monthToText = (month) => {
     //return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'][month] || 'Unknown';
@@ -71,6 +73,8 @@ const LangIcon = ({ lang }) => {
             return <ToolTipIcon title="MongoDB" icon={<MongodbOriginalWordmark size="24" />} />;
         case 'NextJS':
             return <ToolTipIcon title="NextJS" icon={<NextjsOriginalWordmark size="24" />} />;
+        case 'Django':
+            return <ToolTipIcon title="Django" icon={<DjangoPlainWordmark size="24" />} />;
         default:
             return <ToolTipIcon title="Unknown" icon={<QuestionMarkIcon size="24" />} />;
     }
@@ -88,6 +92,7 @@ const Project = ({ data }) => {
         childrens = (
             <>
                 <Typography variant={data.type}>{data.label}</Typography>
+                {data.desc && <Typography>{data.desc}</Typography>}
                 {childProjects}
             </>
         );
@@ -112,6 +117,14 @@ const Project = ({ data }) => {
                 <Typography>{time}</Typography>
                 <Typography>{data.desc}</Typography>
                 <Typography>{techs}</Typography>
+                {data.link && (
+                    <Typography>
+                        Related Links:{' '}
+                        <Link to={data.link} target="_blank">
+                            {data.link}
+                        </Link>
+                    </Typography>
+                )}
             </>
         );
     }

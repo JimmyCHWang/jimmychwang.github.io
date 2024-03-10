@@ -47,6 +47,36 @@ const professionalProjects = [
 
 const personalProjects = [
     {
+        id: 'puzzle-hunts',
+        label: 'Puzzle Hunts',
+        desc: 'Puzzle hunts are like scavenger hunts. Participants work together or compete to solve a series of puzzles or challenges.',
+        type: 'h4',
+        children: [
+            {
+                id: 'jhjm-2024',
+                label: 'Jianghu Hunt 2024',
+                type: 'h5',
+                children: null,
+                desc: 'A puzzle hunt powered by gph-site using Django with modifications.',
+                lang: ['Django', 'Python'],
+                tech: ['Django', 'Markdown', 'SQLite3'],
+                time: [2024, 0, 2024, 2],
+                link: 'https://jh2024.jianghujiemi.fun/',
+            },
+            {
+                id: 'miaohunt-2023',
+                label: 'Miaohunt 2023',
+                type: 'h5',
+                children: null,
+                desc: 'A puzzle hunt hosted by Miao team powered by Project Guiding Star with modifications.',
+                lang: ['React', 'TypeScript', 'Python'],
+                tech: ['React', 'NextJS', 'Flask', 'Jinja2'],
+                time: [2023, 10, 2024, 0],
+                link: 'https://mh2023.puzzlehunt.cn/',
+            },
+        ],
+    },
+    {
         id: 'github-io-website',
         label: 'GitHub Website (this site)',
         type: 'h5',
